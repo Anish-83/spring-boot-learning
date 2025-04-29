@@ -18,12 +18,12 @@ public class TaskController {
         new Task(3, "Deploy", "pending",6)
     );
 
-    @GetMapping("/tasks")
+//    @GetMapping("/tasks")
     public List<Task> getTasks() {
         return tasks;
     }
 
-    @GetMapping("/tasks/pending")
+//    @GetMapping("/tasks/pending")
     public List<Task> getPendingTasks() {
         return tasks.stream()
             .filter(t -> t.getStatus().equals("pending"))
