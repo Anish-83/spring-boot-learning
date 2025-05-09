@@ -13,17 +13,17 @@ import java.util.stream.Collectors;
 public class TaskController {
     // Hardcoded task list
     private List<Task> tasks = Arrays.asList(
-        new Task(1, "Code", "pending",12),
-        new Task(2, "Test", "done",11),
-        new Task(3, "Deploy", "pending",6)
+        new Task(1, "Code", "pending"),
+        new Task(2, "Test", "done"),
+        new Task(3, "Deploy", "pending")
     );
 
-//    @GetMapping("/tasks")
+    @GetMapping("/tasks")
     public List<Task> getTasks() {
         return tasks;
     }
 
-//    @GetMapping("/tasks/pending")
+    @GetMapping("/tasks/pending")
     public List<Task> getPendingTasks() {
         return tasks.stream()
             .filter(t -> t.getStatus().equals("pending"))
